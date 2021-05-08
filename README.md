@@ -54,4 +54,4 @@ client.login({
 * Save all files, then run `node index.js` in the terminal
 * It should log that it's ready, and the RPC status should appear on your profile!
 
-Ex : https://cdn.discordapp.com/attachments/829221596102262825/840540209568284712/images_1.jpeg
+Ex : <https://cdn.discordapp.com/attachments/829221596102262825/840540209568284712/images_1.jpeg>
