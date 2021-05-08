@@ -117,7 +117,7 @@ client . on ( " ready " , ( ) => {
 } )
 ```
 
-Ex : <img src:"https://cdn.discordapp.com/attachments/572109264529653821/635937228815728661/unknown.png">
+Ex : <img src="https://cdn.discordapp.com/attachments/572109264529653821/635937228815728661/unknown.png">
 
 
 *This repository is for educational purposes :D
