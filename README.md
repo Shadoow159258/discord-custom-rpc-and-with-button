@@ -93,3 +93,31 @@ client . on ( " ready " , ( ) => {
 ```
 Ex : <img src="https://media.discordapp.net/attachments/572109264529653821/635929940113752074/unknown.png">
 
+# Spotify rpc status 
+
+```js
+let  discord  = require ( " discord.js " ) 
+let  rpcGenerator  = require ( " discordrpcgenerator " ) 
+let  client  = new discord . Customer ( )  
+ 
+client . login ( " your token " )
+ 
+client . on ( " ready " , ( ) => {   
+    let  presence  = rpcGenerator . createSpotifyRpc ( client ) 
+    . setAssetsLargeImage ( " spotify: f2ed07272dec9cfc3b6805e9c59eac3391a59bed " )
+    //  you must use images hosted on spotify (album cover / playlist) 
+    //  to be able to display them.
+    . setAssetsSmallImage ( " spotify: f2ed07272dec9cfc3b6805e9c59eac3391a59bed " )
+    . setDetails ( " RpcGenerator - Demo " )
+    . setState ( " Rpc Generator " )
+    //  The name is a field reserved for spotify. 
+    //  So you can't use setName ().
+ 
+    client . wear out . setPresence ( presence . toDiscord ( ) )
+} )
+```
+
+Ex : <img src:"https://cdn.discordapp.com/attachments/572109264529653821/635937228815728661/unknown.png">
+
+
+*This repository is for educational purposes :D
