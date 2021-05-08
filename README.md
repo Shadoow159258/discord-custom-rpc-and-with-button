@@ -1,4 +1,4 @@
-# discord-rpc-with-buttons
+# discord-custom-rpc's-and-rpc-with-buttons
 
 This guide explains how to make a custom RPC status on Discord!
 
@@ -15,7 +15,7 @@ This guide explains how to make a custom RPC status on Discord!
 ## Step Two: Creating the project
 * Make a new folder and open it in your code editor
 * Open a terminal in your project's folder and initialize the project with `npm init -y` (if it gives an error run the interactive setup with `npm init`)
-* Install the `discord-rpc` package: `npm install discord-rpc` and if you want RPC's below custom buttons install package : `npm install discordrpcgenerator`
+* Install the `discord-rpc` package: `npm install discord-rpc` and if you want RPC's without custom buttons then install package : `npm install discordrpcgenerator`
 * Now, make an `index.js` file and put the following in:
 ```js
 const RPC = require('discord-rpc');
