@@ -55,3 +55,41 @@ client.login({
 * It should log that it's ready, and the RPC status should appear on your profile!
 
 Ex : <img src="https://cdn.discordapp.com/attachments/829221596102262825/840540209568284712/images_1.jpeg">
+
+## Custom RPC's
+* NOTE : you need to install `npm install discordrpcgenerator` for using rpc mentioned below 👇 
+
+* Normal rpc 
+Code 
+```js
+let  discord  = require ( " discord.js " ) 
+let  rpcGenerator  = require ( " discordrpcgenerator " ) 
+var uuid = ( ) => ( [ 1e7 ] + - 1e3 + - 4e3 + - 8e3 + - 1e11 ) . replace ( / [ 018 ] / g , a => ( a ^ Math . random ( ) * 16 >> a / 4 ) . toString ( 16 ) ) //    or require ("uuid / v4")
+let  client  = new discord . Customer ( )  
+ 
+client . login ( " your token " )
+ 
+client . on ( " ready " , ( ) => {   
+    rpcGenerator . getRpcImage ( " 383226320970055681 " , " js " ) 
+    . then ( image =>  { 
+        let  presence  = new rpcGenerator . Rpc ( )  
+        . setName ( " My rpc " )
+        . setUrl ( " https://twitch.tv/discord " )
+        . setType ( " STREAMING " )
+        . setApplicationId ( " 383226320970055681 " )
+        . setAssetsLargeImage ( image . id )
+        . setAssetsLargeText ( image . name )
+        . setDetails ( " : pasdechance: " )
+        . setState ( " Waaaaaw " )
+        . setParty ( {
+            size : [ 1 , 4 ] ,  
+            id : uuid ( ) 
+        } )
+        . setDetails ( " d4rk " )
+ 
+        client . wear out . setPresence ( presence . toDiscord ( ) )
+    } ) . catch ( console . error )
+} )
+```
+Ex : <img src="https://media.discordapp.net/attachments/572109264529653821/635929940113752074/unknown.png">
+
